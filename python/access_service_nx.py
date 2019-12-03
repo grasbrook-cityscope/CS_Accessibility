@@ -119,8 +119,8 @@ def createGridGraphs(meta_grid_xy, interactive_meta_cells, graph, nrows, ncols,
     """
     returns new networks including roads around the cells
     """
-#    create graph internal to the grid
-#    graph.add_nodes_from('g'+str(n) for n in range(len(grid_coords_xy)))
+    #    create graph internal to the grid
+    #    graph.add_nodes_from('g'+str(n) for n in range(len(grid_coords_xy)))
     n_links_to_real_net=0
     for c in range(ncols):
         for r in range(nrows):
@@ -178,8 +178,10 @@ int_to_meta_grid={}
 for fi, f in enumerate(meta_grid['features']):
     if f['properties']['interactive']:
         int_to_meta_grid[int(f['properties']['interactive_id'])]=fi 
-        
-with urllib.request.urlopen(cityIO_grid_url+'/meta_grid_header') as url:
+
+n_cells = len(meta_grid['features'])
+
+with urllib.request.urlopen(cityIO_grid_url+'/header/spatial') as url:
 #get the latest grid data
     meta_grid_header=json.loads(url.read().decode())
 

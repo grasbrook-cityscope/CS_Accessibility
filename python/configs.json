@@ -61,6 +61,68 @@
     "table_name": "grasbrook",
     "add_grid_roads":true
   },
+  "Hamburg2": {
+    "feed_dicts": {
+      "main": "http://daten.transparenz.hamburg.de/Dataport.HmbTG.ZS.Webservice.GetRessource100/GetRessource100.svc/0c0e35e2-8d5d-4211-af49-ee3a4e6c31db/Upload__HVV_Rohdaten_GTFS_Fpl_20191112.zip"
+    },
+    "bboxes": {
+      "all_zones": [
+        9.734413735728332,
+        53.39638099802139,
+        10.325271108603445,
+        53.72943554464314
+      ],
+      "sim_area": [
+        10.000748807171703,
+        53.52640987365575,
+        10.02223991398489,
+        53.53789434597681
+      ],
+      "amenities": [
+        9.965,
+        53.509,
+        10.05,
+        53.55
+      ]
+    },
+    "zonal_pois": ["housing"],
+    "osm_pois": {
+      "food": [
+        "amenity_restaurant",
+        "amenity_cafe",
+        "amenity_fast_food",
+        "amenity_pub"
+      ],
+      "nightlife": [
+        "amenity_bar",
+        "amenity_pub",
+        "amenity_nightclub",
+        "amenity_biergarten"
+      ],
+      "groceries": [
+        "shop_convenience",
+        "shop_grocer",
+        "shop_greengrocer",
+        "shop_food",
+        "shop_supermarket"
+      ],
+      "education": [
+        "amenity_school",
+        "amenity_university",
+        "amenity_college"
+      ]
+    },
+    "local_epsg": "31468",
+    "sampling_grid": {
+      "col_margin_left": 70,
+      "row_margin_top": 50,
+      "cell_width": 250,
+      "cell_height": 250,
+      "stride": 5
+    },
+    "table_name": "grasbrook_test",
+    "add_grid_roads":true
+  },
   "Budapest": {
     "bboxes": {
       "all_zones": [
